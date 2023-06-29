@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  final myController1 = TextEditingController();
+  final myController2 = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: Text("sembarang")),
+        body: Column(
+          children: [
+            Container(
+              child: MyClass1(),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MyClass1 extends StatefulWidget {
+  State<MyClass1> createState() => _MyClass1();
+}
+
+class _MyClass1 extends State<MyClass1> {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Text("Ini dari state full"),
+    );
+  }
+}
+
+//stateful methodnya state
